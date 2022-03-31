@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!---FontAwesome Webkit-->
+    <script src="https://kit.fontawesome.com/7842c4110d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css\main.css" media="screen">
+    <title>FCC: #5 Personal Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <ul class="navlink">
+                <li><a class="link" href="#welcome-section">Who We Are</a></li>
+                <li><a class="link" href="#projects-wrap">Projects</a></li>
+                <li><a class="link" href="#contact-wrap">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!--- main content blocks to appear here -->
+        <div id="welcome-section">
+            <!---Welcome section-->
+            <div class="welcome-message">
+                <h1>We are</h1>
+                <h1 id="logo">&nbsp;JAR&nbsp;</h1>
+                <h1>Media</h1>
+            </div>
+        </div>
+
+          <div id="projects-wrap">
+            <h2>Our Projects</h2>
+            <div id="projects">
+
+                <div class="project-tile">
+                    <a href="https://riclmcr.github.io/Bee-The-Hero-V1.1/" target="new">
+                        <img class="project-img" src="images/bth (3).jpg" alt="JAR Media Sample 1">
+                        <div class="project-img-header">
+                            <h2>Bee The Hero</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-tile"><img class="project-img" src="images/JAR2.jpg">
+                    <div class="project-img-header">
+                        <h2>Project 2</h2>
+                    </div>
+                </div>
+
+                <div class="project-tile"><img class="project-img" src="images/JAR3.jpg">
+                    <div class="project-img-header">
+                        <h2>Project 3</h2>
+                    </div>
+                </div>
+
+                <div class="project-tile"><img class="project-img" src="images/JAR4.jpg">
+                    <div class="project-img-header">
+                        <h2>Project 4</h2>
+                    </div>
+                </div>
+                <div class="project-tile"><img class="project-img" src="images/JAR5.jpg">
+                    <div class="project-img-header">
+                        <h2>Project 5</h2>
+                    </div>
+                </div>
+                <div class="project-tile"><img class="project-img" src="images/JAR6.jpg">
+                    <div class="project-img-header">
+                        <h2>Project 6</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="skew-bg"></div> -->
+
+        <div id="contact-wrap">
+            <form id="contact" action="#">
+                <h2>Want To Know More? Contact Us Below!</h2>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" class="input" name="firstname" placeholder="&nbsp;First name" required>
+                <label for="sname">Surname</label>
+                <input type="text" id="sname" class="input" name="surname" placeholder="&nbsp;Surname" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input" name="email" placeholder="&nbsp;Email" required>
+                <label for="subject">Your Message</label>
+                <textarea id="subject" name="subject" class="input" placeholder="&nbsp;What's on your mind?"
+                    style="height:200px" required></textarea>
+                <input type="submit" id="input-submit" class="input" value="Submit">
+            </form>
+
+            <div id="social">
+                <h2>Get Social With Us</h2>
+                <div id="social-icons">
+                    <a href="#"><i class="fa-brands fa-youtube fa-4x"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook fa-4x"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram-square fa-4x"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <ul>
+            <li>
+                <h6><a href="#">Sitemap</a></h6>
+            </li>
+            <li>
+                <h6><a href="#">Privacy Policy</a></h6>
+            </li>
+            <li>
+                <h6><a href="#">Terms</a></h6>
+            </li>
+            <li>
+                <h6><a id="profile-link" href="https://github.com/RicLMCR" target="_blank">Github</a></h6>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

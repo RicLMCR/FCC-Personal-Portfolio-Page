@@ -1,0 +1,296 @@
+/**************************************** Global Rules ****************************************/
+
+:root{
+    --terracotta-red:hsl(0, 64%, 45%);
+    --charcole-grey:hsl(0, 0%, 35%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Smooth scroll to page section when pressing nav-bar link */
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 6em;
+    color: var(--charcole-grey);
+}
+
+h6{
+    color: var(--white);
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+/**************************************** nav bar ****************************************/
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 5em;
+    background-color: var(--terracotta-red);
+    z-index: 1;
+}
+
+.navlink{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2em;
+}
+
+.link{
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    list-style-type: none;
+    font-size: 1em;
+}
+
+a:link {    
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a:hover {    
+    list-style-type: none;
+    border-bottom: 2px solid white;
+}
+
+a:after {    
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a:active {    
+    list-style-type: none;
+    text-decoration:none;
+}
+
+
+/**************************************** Main ****************************************/
+
+#main{
+    padding-top: 5em;
+    width: 100%;
+}
+
+
+/**************************************** Welcome ****************************************/
+
+#welcome-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-message{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+}
+
+#logo{
+    color: var(--terracotta-red);
+    animation: shake 7s ease-in both;
+    /* animation-delay: 15s; */
+    animation-iteration-count: infinite;
+}
+
+/* animation instructions for logo shake*/
+/* .welcome-message:hover #logo {    
+    animation: shake .4s ease-in forwards;
+} */
+/* keyframes for logo shake */
+@keyframes shake {
+    45%{transform:translateY(0%);}
+    46%{transform:translateY(-100%);}
+    47%{transform:translateY(80%);}
+    48%{transform:translateY(-80%);}
+    49%{transform:translateY(70%);}
+    50%{transform:translateY(-50%);}
+    51%{transform:translateY(30%);}
+    52%{transform:translateY(-20%);}
+    53%{transform:translateY(10%);}
+    54%{transform:translateY(-10%);}
+    55%{transform:translateY(5%);}
+    56%{transform:translateY(-2%);}
+}
+
+
+/**************************************** Project ****************************************/
+
+#projects-wrap{
+    scroll-margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--terracotta-red);
+}
+
+#projects-wrap>h2{
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    padding-top: 2em;
+}
+
+/* Grid display for portfolio samples */
+#projects{
+    width: 100%;
+    margin: 0 auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    grid-row-gap: 3em;
+    padding: 2.5em 0em 3em 0em;
+    
+}
+
+.project-tile{
+    position: relative;
+    width: 350px;
+}
+
+/* rollover transition for project tiles */
+
+.project-img-header{
+    position:absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, .6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+.project-img-header >*{
+    transform: translateY(20px);
+    transition: transform .25s;
+}
+
+.project-img-header:hover{
+    opacity: 1;
+}
+
+.project-img-header:hover>*{
+    transform: translateY(0);
+}
+
+.project-img{
+    display: block;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+
+/**************************************** Skew Effect ****************************************/
+/* This is a standalone part designed as a footer for the 'project' section of the page */
+
+.skew-bg{
+    display:block;
+
+    margin-top: -25px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--terracotta-red);
+    transform: skew(0deg, 2deg); 
+}
+
+
+/**************************************** Contact Form ****************************************/
+
+#contact-wrap{
+    scroll-margin-top: 3em;
+    display: flex;
+    flex-direction: row;
+    padding: 2.5em;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+#contact>h2{
+    color: var(--terracotta-red);
+}
+
+#contact>label{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--charcole-grey);
+    padding-top: 2em;
+    font-weight: 600;
+}
+
+#contact>textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--charcole-grey);
+    padding-top: 1em;
+}
+
+.input{
+    border: 3px solid var(--charcole-grey);
+    height: 40px;
+}
+
+#input-submit{
+    margin-top: 2em;
+    background-color: var(--terracotta-red);
+    border: none;
+    color: var(--white);
+}
+
+#social{
+    padding-left: 10%;
+}
+
+#social>h2{
+    color: var(--charcole-grey);
+}
+
+/* Font Awesome icons - additional styling */
+.fa-brands{
+    padding:.5em .5em 0 0;
+    color: var(--terracotta-red);
+}
+
+
+/**************************************** Footer ****************************************/
+
+#footer{
+    padding: 2em 0 1em 2.5em;
+    background-color: var(--charcole-grey);    
+}
+
+#footer>ul>li>h6>a{
+    color: var(--white);   
+}
+
+#footer>ul>li>h6{
+    padding: .3em;
+}
